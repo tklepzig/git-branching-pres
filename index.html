@@ -46,6 +46,72 @@
 				<h1>Git Branching</h1>
 			</section>
 
+			<section>
+				<section>
+					<h2>Warum &amp; wozu?</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Produktive funktionierende Version gewährleisten</li>
+						<li class="fragment">Dinge ausprobieren, ohne den vorhandenen Code zu gefährden</li>
+						<li class="fragment">Einzelne Features bzw. Programmteile im Entwicklungsprozess isolieren</li>
+						<li class="fragment">...</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Branches benennen</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Darf kein ASCII Steuerzeichen enthalten</li>
+						<li class="fragment">Keines der folgenden Zeichen darf vorkommen: Leerzeichen, Tilde (~), Caret (^), Doppelpunkt, Fragezeichen, Asterisk (*), Öffnende eckige Klammer ([)</li>
+						<li class="fragment">Darf kein Backslash enthalten</li>
+					</ul>
+					<p class="fragment">Vollständige Liste: <a href="https://www.kernel.org/pub/software/scm/git/docs/git-check-ref-format.html">git-check-ref-format Manual Page</a></p>
+				</section>
+				<section>
+					<ul>
+						<li>Nutzerverwaltung</li>
+						<li class="fragment">ValidierungBeiPasswortAenderung</li>
+						<li class="fragment">HochgeladeneDateiMaximal5MB</li>
+						<li class="fragment">GesperrterNutzerWirdNichtNach5MinutenEntsperrt</li>
+					</ul>
+				</section>
+				<section data-background="https://i.imgur.com/iWKad22.jpg">
+					<!-- <img src="https://static.ylilauta.org/files/tb/orig/ievoy4j5/1434823268000.jpg" class="stretch"> -->
+				</section>
+				<section>
+					<p>Besser: Kurze und prägnante Namen sowie hierarchische Bezeichnungen</p>
+					<ul>
+						<li>feature/nutzerverwaltung</li>
+						<li class="fragment">bugfix/validiere-passwort</li>
+						<li class="fragment">hotfix/preisberechnung-rundungsfehler</li>
+						<li class="fragment">release/v1.0.0</li>
+						<p class="fragment">&rarr; Kein CamelCase, sondern Wörter mit Minus trennen</p>
+					</ul>
+				</section>
+				<section>
+					<p>TODO</p>
+					<!-- Für die Trennung der Hierarchie-Ebene wäre auch ein anderes Zeichen als der Slash möglich, bspw. ein Minus
+					Der Slash führt aber dazu, dass die Branch-Kategorien von Git als Verzeichnisse behandelt werden
+					Das führt auch dazu, dass in versch. UI Tools (bspw. SourceTree) die Branches als Ordner interpretiert und somit danach gruppiert angezeigt werden -->
+				</section>
+				<section>
+					<p>Alles nur Best Practices, wenn es einem gar nicht zusagt, kann man es auch komplett anders machen</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Git Flow</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Praxisbeispiel</h2>
+				</section>
+			</section>
 		</div>
 
 	</div>
