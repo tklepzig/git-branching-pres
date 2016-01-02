@@ -44,7 +44,10 @@
 
 			<section>
 				<section>
-					<h1>Git Branching</h1>
+					<div>
+						<img src="images/git-logo.png" alt="Git Logo" style="width: 400px;">
+					</div>
+					<h1>Branching</h1>
 				</section>
 				<section>
 					<h3>Verwendetes Vokabular</h3>
@@ -132,23 +135,26 @@
 						<li><i>hotfix</i></li>
 					</ul>
 				</section>
-				<section>
-					<h2>master</h2>
-					<ul>
-						<li>Entspricht immer dem produktiven Stand</li>
-						<li class="fragment"> Auf master findet <b>nur ein merge</b> statt, kein commit</li>
-						<li class="fragment">Jeder commit ist mit einem Tag versehen, der die Versionsnummer enthält</li>
-						<li class="fragment">Existiert immer in dem Repository, wird nie gelöscht</li>
-					</ul>
-				</section>
-				<section>
-					<h2>develop</h2>
-					<ul>
-						<li>Entspricht dem aktuellen Entwicklungsstand für das <b>nächste</b> Release</li>
-						<li class="fragment">Bei stabilen Stand wird dieser zurück nach master gemerged</li>
-						<li class="fragment">Existiert ebenfalls immer in dem Repository</li>
-					</ul>
-				</section>
+			</section>
+
+			<section>
+				<h2>master</h2>
+				<ul>
+					<li>Entspricht immer dem produktiven Stand</li>
+					<li class="fragment"> Auf master findet <b>nur ein merge</b> statt, kein commit</li>
+					<li class="fragment">Jeder commit ist mit einem Tag versehen, der die Versionsnummer enthält</li>
+					<li class="fragment">Existiert immer in dem Repository, wird nie gelöscht</li>
+				</ul>
+			</section>
+			<section>
+				<h2>develop</h2>
+				<ul>
+					<li>Entspricht dem aktuellen Entwicklungsstand für das <b>nächste</b> Release</li>
+					<li class="fragment">Bei stabilen Stand wird dieser zurück nach master gemerged</li>
+					<li class="fragment">Existiert ebenfalls immer in dem Repository</li>
+				</ul>
+			</section>
+			<section>
 				<section>
 					<h2>feature</h2>
 					<ul>
@@ -181,6 +187,8 @@ $ git push origin develop</pre>
 					<pre>$ git branch -d feature/f1
 $ git push origin :feature/f1</pre>
 				</section>
+			</section>
+			<section>
 				<section>
 					<h2>release</h2>
 					<ul>
@@ -218,6 +226,8 @@ $ git merge --no-ff release/v1.2.0</pre>
 					<pre>$ git branch -d release/v1.2.0
 $ git push origin :release/v1.2.0</pre>
 				</section>
+			</section>
+			<section>
 				<section>
 					<h2>hotfix</h2>
 					<ul>
@@ -256,18 +266,109 @@ $ git merge --no-ff hotfix/v1.2.1</pre>
 					<pre>$ git branch -d hotfix/v1.2.1
 $ git push origin :hotfix/v1.2.1</pre>
 				</section>
-				<section>
-					<a href="pdf/Git-branching-model.pdf" target="_blank">&nearr; Git Flow Übersicht (PDF)</a>
-				</section>
+			</section>
+			<section>
+				<a href="pdf/Git-branching-model.pdf" target="_blank">&nearr; Git Flow Übersicht (PDF)</a>
 			</section>
 			<section>
 				<section>
-					<h1>Praxisbeispiel</h1>
+					<h1>Learning by doing...</h1>
 				</section>
+				<section>
+					<h2>Aufgabe</h2>
+					<p>Erstellen einer Datei mit sechs Regeln, jede Regel repräsentiert dabei ein Feature</p>
+				</section>
+				<section>
+					<pre>$ git init</pre>
+					<pre>$ touch things.txt</pre>
+				</section>
+				<section>
+					<h3>things.txt:</h3>
+					<pre style="font-size: 0.9em;">Version: v0.1.0
+
+Six impossible things before breakfast:
+1. There's a potion that can make you shrink.</pre>
+				</section>
+				<section>
+					<pre>$ git add things.txt</pre>
+					<pre>$ git commit -m init</pre>
+				</section>
+				<section>
+					<h3>Neues Feature: <span class="highlight">rule2</span></h3>
+					<pre>2. And a cake that can make you grow.</pre>
+				</section>
+				<section>
+					<h3>Neues Feature: <span class="highlight">rule3</span></h3>
+					<pre>3. Animals can tak.</pre>
+				</section>
+				<section>
+					<h3>Release erzeugen: <span class="highlight">v0.2.0</span></h3>
+					<p>Versionsnummer anpassen (commit auf release) und releasen</p>
+				</section>
+				<section>
+					<h3>Neues Feature: <span class="highlight">rule4</span></h3>
+					<pre>4. Cats ca disappear.</pre>
+				</section>
+				<section>
+					<h3>Bugfix auf develop</h3>
+					<p><code>ca</code> in <code>can</code> ändern</p>
+				</section>
+				<section>
+					<h3>Hotfix: <span class="highlight">v0.2.1</span></h3>
+					<p><code>tak</code> in <code>talk</code> ändern</p>
+				</section>
+				<section>
+					<h3>Neues Feature: <span class="highlight">rule5</span></h3>
+					<pre>5. There is a place called Wonderland.</pre>
+				</section>
+				<section>
+					<h3>Neues Feature: <span class="highlight">rule6</span></h3>
+					<pre>6. I can slay the Jabberwocky.</pre>
+				</section>
+				<section>
+					<h3>Release erzeugen: <span class="highlight">v1.0.0</span></h3>
+					<p>Versionsnummer anpassen (commit auf release) und releasen</p>
+				</section>
+				<section>
+					<h3>Fertige Datei:</h3>
+					<pre style="font-size: 0.9em;">Version: v1.0.0
+Six impossible things before breakfast:
+1. There's a potion that can make you shrink.
+2. And a cake that can make you grow.
+3. Animals can talk.
+4. Cats can disappear.
+5. There is a place called Wonderland.
+6. I can slay the Jabberwocky.</pre>
+				</section>
+			</section>
+			<section>
+				<h1>Fragen? Fragen!</h1>
 			</section>
 		</div>
 
 	</div>
+
+<!--
+init:
+
+Version: v0.1.0
+Six impossible things before breakfast:
+1. There's a potion that can make you shrink.
+
+___
+Verlauf:
+
+Feature: 2. And a cake that can make you grow.
+Feature: 3. Animals can tak.
+Release v0.2.0 (erst im Release Branch die Versionsnummer anpassen)
+Feature: 4. Cats ca disappear.
+Bugfix on develop (ca zu can)
+Hotfix v0.2.1 (tak zu talk)
+Feature: 5. There is a place called Wonderland.
+Feature: 6. I can slay the Jabberwocky.
+Release v1.0.0 (erst im Release Branch die Versionsnummer anpassen)
+-->
+
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
