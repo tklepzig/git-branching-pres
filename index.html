@@ -259,7 +259,7 @@ $ git tag -a v1.2.1</pre>
 					<h3>Ebenfalls nach develop mergen</h3>
 					<pre>$ git checkout develop
 $ git merge --no-ff hotfix/v1.2.1</pre>
-					<p class="alert">&rarr; Ist gerade ein Release im Gange, sollte der Hotfix Branch in diesen Release-Branch gemerged werden</p>
+					<p class="alert">&rarr; Ist gerade ein Release im Gange, sollte der Hotfix Branch stattdessen in diesen Release-Branch gemerged werden</p>
 				</section>
 				<section>
 					<h3>Branch lokal &amp; ggf. remote löschen</h3>
@@ -303,7 +303,7 @@ Six impossible things before breakfast:
 				</section>
 				<section>
 					<h3>Release erzeugen: <span class="highlight">v0.2.0</span></h3>
-					<p>Versionsnummer anpassen (commit auf release) und releasen</p>
+					<p>Versionsnummer anpassen (erst auf dem Release-Branch!) und releasen</p>
 				</section>
 				<section>
 					<h3>Neues Feature: <span class="highlight">rule4</span></h3>
@@ -327,7 +327,7 @@ Six impossible things before breakfast:
 				</section>
 				<section>
 					<h3>Release erzeugen: <span class="highlight">v1.0.0</span></h3>
-					<p>Versionsnummer anpassen (commit auf release) und releasen</p>
+					<p>Versionsnummer anpassen und releasen</p>
 				</section>
 				<section>
 					<h3>Fertige Datei:</h3>
