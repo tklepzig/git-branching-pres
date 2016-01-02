@@ -9,6 +9,9 @@
 .reveal section h1, .reveal section h2 {
     color: #e25d45;
 }
+.reveal section .highlight {
+    color: #c9f833;
+}
 .reveal pre {
     font-size: 1em;
     width: auto;
