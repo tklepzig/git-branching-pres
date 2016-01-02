@@ -12,6 +12,9 @@
 .reveal section .highlight {
     color: #c9f833;
 }
+.reveal section .alert {
+    color: #ff3737;
+}
 .reveal pre {
     font-size: 1em;
     width: auto;
@@ -20,4 +23,9 @@
     overflow: auto;
     background-color: #3F3F3F;
     color: white;
+}
+.reveal code {
+    background-color: #3F3F3F;
+    color: white;
+    padding: 4px;
 }
