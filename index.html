@@ -125,6 +125,54 @@
 			</section>
 			<section>
 				<section>
+					<h1>Mit Branches arbeiten</h1>
+				</section>
+				<section>
+					<pre>$ git checkout master</pre>
+					<pre>$ git checkout -b develop master</pre>
+				</section>
+				<section>
+					<h2>Fast-Forward vs. Recursive Merge</h2>
+				</section>
+				<section>
+					<h2>Rebasing</h2>
+				</section>
+				<section>
+					<h2>Synchronisation</h2>
+					<ul>
+						<li>Vermeiden von umfangreichem Merge am Ende</li>
+						<li class="alert">Bei veröffentlichtem Branch niemals rebasen!</li>
+						<li><pre>$ git checkout feature/user-mgmt
+$ git merge develop</pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Änderungen vom zentralen Repo integrieren</h2>
+					<ul>
+						<li>Kein pull verwenden</li>
+						<li>Erst fetchen (<span class="highlight">git fetch -p</span>)</li>
+						<li>Anschließend mergen (<span class="highlight">git merge --ff-only</span>)</li>
+						<ul>
+							<li>Bei Fehlschlag (Fast-Forward nicht möglich):
+								<span class="highlight">git rebase</span>
+							</li>
+							<li>Bei Merge-Konflikten:
+								<span class="highlight">git mergetool</span>
+								<ul>
+									<li>Anschließend
+										<span class="highlight">git rebase --continue</span> aufrufen</li>
+								</ul>
+							</li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h2>Git Cheatsheet</h2>
+					<a href="https://github.com/tklepzig/git-pres/blob/master/documents/git-cheatsheet.md" target="_blank">Auf Github öffnen</a>
+				</section>
+			</section>
+			<section>
+				<section>
 					<h1>Git Flow</h1>
 				</section>
 				<section>
@@ -281,6 +329,7 @@ $ git push origin :hotfix/v1.2.1</pre>
 				</section>
 				<section>
 					<pre>$ git init</pre>
+					<pre>git checkout -b develop</pre>
 					<pre>$ touch things.txt</pre>
 				</section>
 				<section>
@@ -295,39 +344,59 @@ Six impossible things before breakfast:
 					<pre>$ git commit -m init</pre>
 				</section>
 				<section>
-					<h3>Neues Feature: <span class="highlight">thing2</span></h3>
+					<h3>Neues Feature:
+						<span class="highlight">thing2</span>
+					</h3>
 					<pre>2. And a cake that can make you grow.</pre>
 				</section>
 				<section>
-					<h3>Neues Feature: <span class="highlight">thing3</span></h3>
+					<h3>Neues Feature:
+						<span class="highlight">thing3</span>
+					</h3>
 					<pre>3. Animals can tak.</pre>
 				</section>
 				<section>
-					<h3>Release erzeugen: <span class="highlight">v0.2.0</span></h3>
+					<h3>Release erzeugen:
+						<span class="highlight">v0.2.0</span>
+					</h3>
 					<p>Versionsnummer anpassen (erst auf dem Release-Branch!) und releasen</p>
 				</section>
 				<section>
-					<h3>Neues Feature: <span class="highlight">thing4</span></h3>
+					<h3>Neues Feature:
+						<span class="highlight">thing4</span>
+					</h3>
 					<pre>4. Cats ca disappear.</pre>
 				</section>
 				<section>
 					<h3>Bugfix auf develop</h3>
-					<p><code>ca</code> in <code>can</code> ändern</p>
+					<p>
+						<code>ca</code> in
+						<code>can</code> ändern</p>
 				</section>
 				<section>
-					<h3>Hotfix: <span class="highlight">v0.2.1</span></h3>
-					<p><code>tak</code> in <code>talk</code> ändern</p>
+					<h3>Hotfix:
+						<span class="highlight">v0.2.1</span>
+					</h3>
+					<p>
+						<code>tak</code> in
+						<code>talk</code> ändern</p>
 				</section>
 				<section>
-					<h3>Neues Feature: <span class="highlight">thing5</span></h3>
+					<h3>Neues Feature:
+						<span class="highlight">thing5</span>
+					</h3>
 					<pre>5. There is a place called Wonderland.</pre>
 				</section>
 				<section>
-					<h3>Neues Feature: <span class="highlight">thing6</span></h3>
+					<h3>Neues Feature:
+						<span class="highlight">thing6</span>
+					</h3>
 					<pre>6. I can slay the Jabberwocky.</pre>
 				</section>
 				<section>
-					<h3>Release erzeugen: <span class="highlight">v1.0.0</span></h3>
+					<h3>Release erzeugen:
+						<span class="highlight">v1.0.0</span>
+					</h3>
 					<p>Versionsnummer anpassen und releasen</p>
 				</section>
 				<section>
@@ -349,7 +418,7 @@ Six impossible things before breakfast:
 
 	</div>
 
-<!--
+	<!--
 init:
 
 Version: v0.1.0
@@ -369,7 +438,6 @@ Feature: 5. There is a place called Wonderland.
 Feature: 6. I can slay the Jabberwocky.
 Release v1.0.0 (erst im Release Branch die Versionsnummer anpassen)
 -->
-
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
