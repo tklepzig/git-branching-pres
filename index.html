@@ -50,7 +50,7 @@
 					<h1>Branching</h1>
 				</section>
 				<section>
-					<h3>Verwendetes Vokabular</h3>
+					<h3>Verwendete Sprache</h3>
 					<p>Kein korrektes Deutsch bzw. Englisch zur besseren Wiedererkennung der Git Befehle</p>
 					<blockquote>"gemerged"</blockquote>
 					<blockquote>"committed"</blockquote>
@@ -63,7 +63,7 @@
 				</section>
 				<section>
 					<ul>
-						<li>Produktive funktionierende Version gewährleisten</li>
+						<li>Produktive, funktionierende Version gewährleisten</li>
 						<li class="fragment">Dinge ausprobieren, ohne den vorhandenen Code zu gefährden</li>
 						<li class="fragment">Einzelne Features bzw. Programmteile im Entwicklungsprozess isolieren</li>
 						<li class="fragment">...</li>
@@ -106,7 +106,6 @@
 					<ul>
 						<li>feature/nutzerverwaltung</li>
 						<li class="fragment">bugfix/validiere-passwort</li>
-						<li class="fragment">hotfix/preisberechnung-rundungsfehler</li>
 						<li class="fragment">release/v1.0.0</li>
 						<li class="fragment">junk/ovale-buttons</li>
 					</ul>
@@ -149,7 +148,7 @@ $ git merge develop</pre></li>
 				<section>
 					<h2>Änderungen vom zentralen Repo integrieren</h2>
 					<ul>
-						<li>Kein pull verwenden</li>
+						<li class="alert">Kein pull verwenden</li>
 						<li>Erst fetchen (<span class="highlight">git fetch -p</span>)</li>
 						<li>Anschließend mergen (<span class="highlight">git merge --ff-only</span>)</li>
 						<ul>
@@ -199,7 +198,7 @@ $ git merge develop</pre></li>
 				<h2>develop</h2>
 				<ul>
 					<li>Entspricht dem aktuellen Entwicklungsstand für das <b>nächste</b> Release</li>
-					<li class="fragment">Bei stabilen Stand wird dieser zurück nach master gemerged</li>
+					<li class="fragment">Bei stabilen Stand wird dieser nach master gemerged</li>
 					<li class="fragment">Existiert ebenfalls immer in dem Repository</li>
 				</ul>
 			</section>
