@@ -217,7 +217,11 @@ $ git merge develop</pre></li>
 						<li>Name:
 							<span class="highlight">feature/...</span>
 						</li>
-						<li class="fragment">Existiert nur solange, wie an dem Feature gearbeitet wird</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>Existiert nur solange, wie an dem Feature gearbeitet wird</li>
 						<li class="fragment">Ist das Feature fertig, wird es nach develop gemerged und anschließend gelöscht</li>
 						<li class="fragment">Wird das Feature verworfen, wird der Branch gelöscht ohne ihn zu mergen</li>
 					</ul>
@@ -251,7 +255,11 @@ $ git push origin :feature/f1</pre>
 						<li>Name:
 							<span class="highlight">release/...</span>
 						</li>
-						<li class="fragment">Dient der Vorbereitung eines Releases</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>Dient der Vorbereitung eines Releases</li>
 						<li class="fragment">Kann kleine Bugfixes und sonstige Release-Vorbereitungen enthalten</li>
 						<li class="fragment">Wird nach dem mergen in master und develop gelöscht</li>
 					</ul>
@@ -290,7 +298,11 @@ $ git push origin :release/v1.2.0</pre>
 						<li>Name:
 							<span class="highlight">hotfix/...</span>
 						</li>
-						<li class="fragment">Für kritische Bugfixes in der Live-Umgebung (master)</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>Für kritische Bugfixes in der Live-Umgebung (master)</li>
 						<li class="fragment">Fehlerbehebung unabhängig vom aktuellen Entwicklungsstand</li>
 						<li class="fragment">Existiert nur solange, wie an dem Bugfix gearbeitet wird</li>
 					</ul>
